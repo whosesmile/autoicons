@@ -27,14 +27,12 @@ grunt.initConfig({
   autoicons: {
     options: {
       rename: function (name) {
-        if (name.indexOf('-active') !== -1) {
-          var base = name.replace('-active', '');
-          name = name + ', :active > .icon-' + base + ', .active > .icon-' + base;
-        }
+        // this name is as class
         return name;
       },
       repath: function (path) {
-        return path.replace('src/', '../');
+        // this path is as background-image
+        return path;
       }
     },
     icons: {
